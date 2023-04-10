@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<style>
+    .padding-page {
+        padding: 50px;
+    }
+
+    @media screen and (max-width: 375px) {
+        .padding-page {
+            padding: 20px;
+        }
+    }
+
+    .headingline-center {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        top: 40%;
+    }
+
+    .logo-center {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .block-center img {
+        width: 100%;
+        height: 400px;
+    }
+
+    @media screen and (max-width: 469px) {
+        .block-center img {
+            width: 350px;
+            height: 300px;
+            display: block;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    .block-center_5x3 img {
+        width: 500px;
+        height: 300px;
+    }
+
+    @media screen and (max-width: 469px) {
+        .block-center_5x3 img {
+
+            width: 300px;
+            height: 300px;
+            /* display: block;
+            justify-content: center;
+            text-align: center; */
+            position: relative;
+            left: 12%;
+            object-fit: cover;
+        }
+    }
+
+    .img-our img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .heading-center {
+        position: relative;
+        top: 40%;
+    }
+
+    .icon-footer {
+        cursor: pointer;
+        color: rgb(0, 162, 255);
+    }
+
+    .img-hover-zoom {
+        overflow: hidden;
+    }
+
+    .img-hover-zoom img {
+        /* width: 100%; */
+        height: auto;
+        transition: transform 1.0s ease, opacity 1.0s ease;
+    }
+
+    .img-hover-zoom:hover img {
+        transform: scale(1.1);
+    }
+
+    .fadetextbox {
+        z-index: 1;
+        /* animation: slide-down 1s ease-out forwards; */
+    }
+
+    .fadetextbox:hover {
+        animation: slide-up 1s ease-out forwards;
+    }
+
+    @keyframes slide-up {
+        0% {
+            opacity: 0;
+            /* ระยะเริ่มจากบนลงล่าง */
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(-25px);
+        }
+
+    }
+
+    @keyframes slide-down {
+        0% {
+            opacity: 0;
+            /* ระยะเริ่มจากบนลงล่าง */
+            transform: translateY(-25px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    .btnfade {
+        font-weight: bold;
+
+        border: 1px solid rgba(255, 255, 255, 0.5);
+
+        background-color: transparent;
+        color: white;
+        background-image: linear-gradient(to left, rgb(255, 255, 255) 50%, rgba(232, 64, 64, 0) 50%);
+        background-size: 200% 100%;
+        transition: background-position 0.5s ease;
+    }
+
+    .btnfade:hover {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-position: -100% 0;
+        color: #000000;
+    }
+
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-fill-mode: both
+    }
+
+    .fadeInUp {
+        opacity: 0;
+        animation-name: fadeInUp;
+        -webkit-animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            transform: translate3d(0, 40px, 0)
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeInUp {
+        from {
+            transform: translate3d(0, 40px, 0)
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+    }
+</style>
+
+<body>
+    <div class="container-fluid" id="apptest">
+        <!-- ///////////////////////////////////// -->
+        <div class="row">
+            <div class="col">
+                <div class="logo-center" style="margin-bottom: 5px;">
+                    <img src="img/avc-logo.ec509b511b9f.png" class="mb-2" style="width: 150px; height: 60px;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="block-center" style="background-image: url(img/detail1.jpg);  width:100%;  height: 600px; object-fit: cover;">
+            <div class="headingline-center animated  fadeInUp">
+                <h1 class="mb-3" style="font-weight: bold;">Headingline Goes Here</h1>
+                <h6 class="mb-3">Subheading Goes Here</h6>
+                <button class="btn btnfade" style=""> Book Now </button>
+            </div>
+        </div>
+
+        <section class="padding-page">
+            <!-- ภาพ1 -->
+            <div class="row">
+                <div class="col-lg-6 col-md-12  col-sm-12">
+                    <h4>About Us</h4>
+                    <p>We are a premier hotel chain with properties all around the world. Our mission is to provide our
+                        guests with an unforgettable experience through exceptional service and luxurious amenities.</p>
+                </div>
+                <div class="col-lg-6 col-md-12  col-sm-12">
+                    <div class="block-center img-hover-zoom">
+                        <img src="img/cover-nologo-9.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- ภาพ2 -->
+            <div class="row mt-3">
+                <div class="col-xl-6 col-lg-6 col-md-12  col-sm-12 ">
+                    <h4>Special Deal 1</h4>
+                    <p>Book now and get 20% off for stays between May 1st to May 31st. This deal includes breakfast,
+                        free WiFi, and access to the gym and pool.</p>
+                    <button class="btn btn-primary mb-3">Book Now</button>
+                </div>
+                <div class="col-xl-6  col-lg-6 col-md-12  col-sm-12">
+                    <div class="block-center_5x3 img-hover-zoom">
+                        <img src="img/room4.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- ภาพ3 -->
+            <div class="row mt-3">
+
+                <div class="col-xl-6    col-lg-6 col-md-12  col-sm-12">
+                    <div class="block-center_5x3 img-hover-zoom mb-3">
+                        <img src="img/room4.jpg">
+                    </div>
+                </div>
+                <div class="col-xl-6  col-lg-6 col-md-12  col-sm-12">
+                    <h4>Special Deal 2</h4>
+                    <p>Book now and get a free night for stays of 5 nights or more. This deal includes breakfast, free
+                        WiFi, and access to the gym and pool.</p>
+                    <button class="btn btn-primary mb-3">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="padding-page">
+                <div class="row">
+                    <h4 class="mb-5">Our Hotels</h4>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 " v-for="(data,index) in datas.name" :key="index">
+                        <div class="fadetextbox">
+                            <div class="card ">
+                                <div class="img-our ">
+                                    <img src="img/room4.jpg">
+                                </div>
+                                <div class="card-body">
+                                    <h5>{{data}}</h5>
+                                    <p>Room: {{datas.namerooms[index]}}</p>
+                                    <p>Size: {{datas.size[index]}}</p>
+                                    <p>Facilities: {{ datas.facilities[index].join(', ') }}</p>
+                                    <p>Capacity: {{datas.capacity[index]}}</p>
+                                    <p>Description: {{datas.description[index]}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <form>
+                <div class="padding-page">
+                    <h4>Reservation Form</h4>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 colsm-12">
+                            <div class=" mb-3">
+                                <div class="input-group-prepend">
+                                    <p for="name">Name</p>
+                                    <input type="text" class="form-control mt-3" style="width: 100%;" name="name"
+                                        id="name" required>
+                                    <p for="email">Email</p>
+                                    <input type="email" class="form-control mt-3" style="width: 100%;" name="email"
+                                        id="email" required>
+                                    <p for="tel">Telephone</p>
+                                    <input type="tel" class="form-control mt-3" style="width: 100%;" name="tel" id="tel"
+                                        required maxlength="10">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 colsm-12">
+                            <div class=" mb-3">
+                                <div class="input-group-prepend">
+                                    <p for="selhotel">Hotel</p>
+                                    <select class="form-select   mt-3" aria-label="Default select example"
+                                        v-model="SelectHotel" name="selhotel" id="selhotel" required>
+                                        <option value="A">
+                                            Hotel: A
+                                        </option>
+                                        <option value="B">
+                                            Hotel: B
+                                        </option>
+                                        <option value="C">
+                                            Hotel: C
+                                        </option>
+                                    </select>
+
+                                    <p>Room</p>
+                                    <select class="form-select mt-3" aria-label="Default select example"
+                                        v-if="SelectHotel == ''">
+                                        <option disabled>Room:A</option>
+                                        <option disabled>Room:B</option>
+                                        <option disabled>Room:C</option>
+                                    </select>
+
+                                    <select class="form-select" aria-label="Default select example"
+                                        v-if="SelectHotel == 'A'">
+                                        <option>Room:A</option>
+                                        <option disabled>Room:B</option>
+                                        <option disabled>Room:C</option>
+                                    </select>
+
+
+                                    <select class="form-select" aria-label="Default select example"
+                                        v-if="SelectHotel == 'B'">
+                                        <option disabled>Room:A</option>
+                                        <option>Room:B</option>
+                                        <option disabled>Room:C</option>
+                                    </select>
+
+                                    <select class="form-select" aria-label="Default select example"
+                                        v-if="SelectHotel == 'C'">
+                                        <option disabled>Room:A</option>
+                                        <option disabled>Room:B</option>
+                                        <option>Room:C</option>
+                                    </select>
+                                    <p for="guests">Guests</p>
+                                    <input type="text" class="form-control mt-3" style="width: 100%;" name="guests"
+                                        id="guests" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                        @click="CheckAgree" required>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        I accept the
+                                        <a href="#">terms and conditions</a>
+                                    </label>
+                                </div>
+                                <button class="btn  btn-primary ms-4 mt-3" @click="CheckSubmit"
+                                    type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </section>
+
+    </div>
+    <div class="mt-3" style="background-color:#ddd;">
+        <div class="d-flex bd-highlight">
+            <div class="p-2 flex-grow-1 bd-highlight">Anantara Vacation Club</div>
+            <div class="p-2 bd-highlight icon-footer"><span>
+                    <i class="fa-brands fa-instagram  me-2"></i>
+
+                    <i class="fa-brands fa-twitter me-2"></i>
+                    <i class="fa-brands fa-youtube  me-2"></i>
+                    <i class="fa-brands fa-facebook  me-2"></i>
+                    <i class="fa-brands fa-pinterest  me-2"></i>
+                </span></div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.min.js"
+        integrity="sha512-Wn/yBJ4RQtrSFtq1z61/DM40a7VGN8wnyg8oVhWSZAZchTO9zS/l8Kw6bk32CYjS5VgProK4ujLRMqxEE/bUPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const App = {
+            data() {
+                return {
+
+                    StatusAgree: false,
+                    ShowStatus: '',
+                    SelectHotel: '',
+                    datas: {
+                        name: ["hotelA", "hotelB", "hotelC"],
+                        namerooms: ["Standard Room", "Deluxe Room", "Suite Room"],
+                        size: [25, 35, 50],
+                        facilities: [
+                            ["Free Wi-Fi", "Air Conditioning", "TV"],
+                            ["Free Wi-Fi", "Air Conditioning", "TV", "Balcony"],
+                            ["Free Wi-Fi", "Air Conditioning", "TV", "Living Room", "Kitchenette"]
+                        ],
+                        capacity: [2, 3, 4],
+                        description: ["A cozy and comfortable room perfect for couples or solo travelers.",
+                            "A spacious and luxurious room with a beautiful view from the balcony.",
+                            "An elegant and fully-equipped suite perfect for families or groups."
+                        ],
+                    },
+
+                }
+            },
+            methods: {
+
+                CheckAgree() {
+                    console.log(this.StatusAgree);
+                    this.StatusAgree = !this.StatusAgree;
+                    console.log(this.StatusAgree);
+                },
+
+                CheckSubmit() {
+                    if (this.StatusAgree == false || this.SelectHotel == '') {
+
+                        this.ShowStatus = "Please accept";
+                    } else {
+                        this.ShowStatus = "Succcess";
+                        return;
+                    }
+
+                },
+
+            },
+            mounted() {
+                console.log('what is :', this.StatusAgree);
+            }
+        };
+        Vue.createApp(App).mount('#apptest');
+    </script>
+</body>
+
+</html>
