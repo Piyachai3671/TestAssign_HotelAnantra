@@ -307,6 +307,9 @@
                                     <p for="selhotel">Hotel</p>
                                     <select class="form-select   mt-3" aria-label="Default select example"
                                         v-model="SelectHotel" name="selhotel" id="selhotel" required oninvalid="this.setCustomValidity('Please select hotel')" oninput="this.setCustomValidity('')">
+                                        <option value="" selected>
+                                            Select hotel
+                                        </option>
                                         <option value="A">
                                             Hotel: A
                                         </option>
@@ -320,14 +323,25 @@
 
                                     <p for="selroom">Room</p>
                                     <select class="form-select mt-3" aria-label="Default select example"
-                                        v-if="SelectHotel == ''" name="selhotel" id="selhotel">
+                                        v-if="SelectHotel == ''" name="selhotel" id="selhotel"
+                                        required oninvalid="this.setCustomValidity('Please select room')"
+                                         oninput="this.setCustomValidity('')"
+                                        >
+                                        <option value="" selected>
+                                            Select room
+                                        </option>
                                         <option value="Standard Room" disabled>Standard Room</option>
                                         <option value="Deluxe Room" disabled>Deluxe Room</option>
                                         <option value="Suite Room" disabled>Suite Room</option>
                                     </select>
 
                                     <select class="form-select" aria-label="Default select example"
-                                        v-if="SelectHotel == 'A'"  v-model="SelectRoom" name="selhotel" id="selhotel">
+                                        v-if="SelectHotel == 'A'"  v-model="SelectRoom" name="selhotel" id="selhotel"
+                                        required oninvalid="this.setCustomValidity('Please select room')"
+                                         oninput="this.setCustomValidity('')">
+                                        <option value="" selected>
+                                            Select room
+                                        </option>
                                         <option value="Standard Room" selected>Standard Room</option>
                                         <option value="Deluxe Room" disabled>Deluxe Room</option>
                                         <option value="Suite Room" disabled>Suite Room</option>
@@ -335,14 +349,24 @@
 
 
                                     <select class="form-select" aria-label="Default select example"
-                                        v-if="SelectHotel == 'B'" v-model="SelectRoom" name="selhotel" id="selhotel">
+                                        v-if="SelectHotel == 'B'" v-model="SelectRoom" name="selhotel" id="selhotel"
+                                        required oninvalid="this.setCustomValidity('Please select room')"
+                                         oninput="this.setCustomValidity('')">
+                                        <option value="" selected>
+                                            Select room
+                                        </option>
                                         <option value="Standard Room" disabled >Standard Room</option>
                                         <option value="Deluxe Room" selected>Deluxe Room</option>
                                         <option value="Suite Room" disabled>Suite Room</option>
                                     </select>
 
                                     <select class="form-select" aria-label="Default select example"
-                                        v-if="SelectHotel == 'C'" v-model="SelectRoom"name="selhotel" id="selhotel">
+                                        v-if="SelectHotel == 'C'" v-model="SelectRoom"name="selhotel" id="selhotel"
+                                        required oninvalid="this.setCustomValidity('Please select room')"
+                                         oninput="this.setCustomValidity('')">
+                                        <option value="" selected>
+                                            Select room
+                                        </option>
                                         <option value="Standard Room" disabled >Standard Room</option>
                                         <option value="Deluxe Room" disabled >Deluxe Room</option>
                                         <option value="Suite Room" selected>Suite Room</option>
