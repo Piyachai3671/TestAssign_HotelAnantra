@@ -291,13 +291,13 @@
                                 <div class="input-group-prepend">
                                     <p for="name">Name</p>
                                     <input type="text" class="form-control mt-3" style="width: 100%;" name="name"
-                                        id="name" required>
+                                        id="name" required oninvalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')">
                                     <p for="email">Email</p>
                                     <input type="email" class="form-control mt-3" style="width: 100%;" name="email"
-                                        id="email" required>
+                                        id="email" required oninvalid="this.setCustomValidity('Please enter your email')" oninput="this.setCustomValidity('')">
                                     <p for="tel">Telephone</p>
                                     <input type="tel" class="form-control mt-3" style="width: 100%;" name="tel" id="tel"
-                                        required maxlength="10">
+                                        required maxlength="10"  oninvalid="this.setCustomValidity('Please enter your telephone')" oninput="this.setCustomValidity('')">
                                 </div>
                             </div>
                         </div>
@@ -306,7 +306,7 @@
                                 <div class="input-group-prepend">
                                     <p for="selhotel">Hotel</p>
                                     <select class="form-select   mt-3" aria-label="Default select example"
-                                        v-model="SelectHotel" name="selhotel" id="selhotel" required>
+                                        v-model="SelectHotel" name="selhotel" id="selhotel" required oninvalid="this.setCustomValidity('Please select hotel')" oninput="this.setCustomValidity('')">
                                         <option value="A">
                                             Hotel: A
                                         </option>
@@ -349,7 +349,7 @@
                                     </select>
                                     <p for="guests">Guests</p>
                                     <input type="text" class="form-control mt-3" style="width: 100%;" name="guests"
-                                        id="guests" required>
+                                        id="guests" required oninvalid="this.setCustomValidity('Please enter amount guest')" oninput="this.setCustomValidity('')">
                                 </div>
                             </div>
                         </div>
